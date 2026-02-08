@@ -1,4 +1,4 @@
-# Cloud-Enabled-Penetration-Testing-Tool-Prototype
+# cloud-pentesting-automation
 Built a modular Python-based penetration testing framework to automate reconnaissance, vulnerability scanning, and reporting using Dockerized micro-tools.
 
 ## 📂 Project Structure
