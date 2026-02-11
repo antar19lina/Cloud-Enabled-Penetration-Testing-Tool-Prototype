@@ -1,5 +1,5 @@
 <p align="center">
-  <b>CyberProbe Pro - (cloud-pentesting-automation)</b>
+  <b>CyberProbe Pro</b>
   <b>Automated Cloud Pentesting & Security Validation Engine</b><br>
   Scalable • Modular • Cloud-Native • DevSecOps-Ready
 </p>
