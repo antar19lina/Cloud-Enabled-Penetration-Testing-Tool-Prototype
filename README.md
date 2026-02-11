@@ -1,102 +1,246 @@
 # CyberProbe Pro - (cloud-pentesting-automation)
-Python-based cloud-deployed security automation tool for reconnaissance, basic vulnerability analysis, and structured reporting in authorized environments.
+
+<p align="center">
+  <b>Automated Cloud Pentesting & Security Validation Engine</b><br>
+  Scalable • Modular • Cloud-Native • DevSecOps-Ready
+</p>
+
+---
+
+## 🚀 Overview
+
+**CloudGuard** is a cloud-native security automation platform designed to perform automated web application and infrastructure security assessments in cloud environments.
+
+It enables:
+
+- Automated vulnerability detection
+- Security header analysis
+- Risk-based classification
+- Structured executive reporting
+- AWS-integrated deployment
+
+CloudGuard is built using secure-by-design principles and follows modular, scalable architecture suitable for DevSecOps workflows and SOC environments.
+
+---
+
+## 🎯 Problem Statement
+
+Modern cloud deployments require continuous security validation.  
+Manual testing is slow, inconsistent, and not scalable.
+
+Organizations need:
+
+- Automated cloud security scanning
+- Structured risk reporting
+- Secure cloud integration
+- Containerized deployment
+- Scalable scanning architecture
+
+CloudGuard addresses these challenges through automated pentesting orchestration.
+
+---
+
+## 🏗️ Architecture Overview
+
+### Core Modules
+
+- **Scanning Engine**
+  - Security header analysis
+  - Vulnerability validation
+  - Timeout & retry mechanism
+  - Rate limiting
+  - Configurable target scanning
+
+- **Reporting Engine**
+  - Executive summary generation
+  - Severity classification (Low / Medium / High / Critical)
+  - Risk scoring logic
+  - Structured JSON-based reporting
+
+- **Cloud Integration**
+  - AWS EC2 deployment
+  - AWS S3 secure report storage
+  - IAM least-privilege access control
+
+- **Containerization**
+  - Docker-based runtime
+  - Portable deployment
+
+---
+
+## 🛠️ Technology Stack
+
+### Programming
+- Python 3
+
+### Cloud & DevOps
+- AWS EC2
+- AWS S3
+- IAM Roles & Policies
+- Docker
+
+### Security Concepts
+- Web Security Headers
+- Vulnerability Assessment
+- Risk Classification
+- Secure Configuration
+- Logging & Monitoring
+
+---
+
+## 🔍 Key Features
+
+- Automated web security header validation
+- Modular vulnerability checks
+- Handles 500+ header evaluations per target
+- Connection pooling & retry logic
+- Severity-based vulnerability classification
+- Structured executive-level reporting
+- Cloud-native deployment model
+- Docker containerization
+- Logging with INFO / WARNING / ERROR levels
+
+---
+
+## 📊 Sample Report Structure
+
+1. Executive Summary  
+2. Scan Metadata  
+3. Target Overview  
+4. Vulnerabilities Identified  
+5. Risk Severity Breakdown  
+6. Technical Findings  
+7. Remediation Recommendations  
+
+---
+
+## 🔐 Security Best Practices Implemented
+
+- No hardcoded credentials
+- Environment variable secret management
+- Least privilege IAM roles
+- Input validation
+- Secure report storage
+- Timeout & exception handling
+- Structured logging
+
+---
+
 ## 📂 Project Structure
 
-```text
-pentest-framework/
+```bash
+cloudguard/
 │
-├── core/
-│   ├── runner.py        # Main controller (orchestrates scans, AWS uploads)
-│   ├── config.py        # Scan configuration & AWS settings
+├── scanner/
+│   ├── header_analyzer.py
+│   ├── vulnerability_checker.py
 │
-├── modules/
-│   ├── port_scan.py     # TCP port scanning
-│   ├── web_check.py     # Web security headers analysis
-│   ├── dir_enum.py      # Directory enumeration
-│   ├── vuln_check.py    # Basic vulnerability flagging (rule-based)
+├── reporting/
+│   ├── report_generator.py
 │
-├── reports/
-│   └── report.json      # Structured JSON scan report
+├── cloud/
+│   ├── s3_upload.py
+│
+├── config/
+│   ├── settings.py
 │
 ├── logs/
-│   └── runtime.log      # Runtime logs for debugging & auditing
-│
-├── tests/
-│   └── test_port_scan.py # Basic unit test (pytest)
-│
-├── aws/
-│   ├── deploy_ec2.sh    # EC2 deployment script (with IAM role)
-│   ├── s3_upload.py     # Upload reports to Amazon S3
-│   ├── iam_policy.json  # Least-privilege IAM policy
-│
-├── docker/
-│   └── Dockerfile.scanner # Dockerized scanner environment
-│
-├── requirements.txt     # Python dependencies
-├── README.md            # Project documentation
-└── LICENSE              # MIT License
+├── main.py
+├── Dockerfile
+└── requirements.txt
 ```
 
-Skills Demonstrated
-Python: Functions, imports, error handling, JSON manipulation, logging.
-Docker: Containerization for portability (build/run images).
-AWS EC2: Cloud VM deployment for secure scans.
-AWS S3: Object storage for reports (upload/download).
-AWS IAM: Policies for access control (e.g., secure S3 perms).
-Cloud Computing: Scalable, ethical deployment in the cloud.
-Other: Ethical hacking basics (OWASP headers), CLI automation, modular design, testing (unit tests).
+---
 
-# Cloud Pentesting Automation (Educational)
+## ⚙️ Installation
 
-# Overview
-This project is a Python-based cloud-deployed security automation tool designed
-to assist in reconnaissance, basic vulnerability analysis, and structured
-reporting for **authorized security testing environments**.
+### 1️⃣ Clone Repository
 
-The focus of this project is **analysis and reporting**, not exploitation.
+```bash
+git clone https://github.com/antar19lina/Cloud-pentesting-automation.git
+cd Cloud-pentesting-automation
+```
+
+### 2️⃣ Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3️⃣ Run Scanner
+
+```bash
+python main.py --target https://example.com
+```
 
 ---
 
-## Security Problem Addressed
-Manual reconnaissance and initial security assessments are time-consuming and
-error-prone when repeated across multiple targets.
+## 🐳 Docker Deployment
 
-Security analysts require:
-- Consistent data collection
-- Structured findings
-- Clear logs for review and escalation
+### Build Image
 
----
+```bash
+docker build -t cloudguard .
+```
 
-# What This Tool Does
-- Performs automated reconnaissance (ports, headers, directories)
-- Applies rule-based vulnerability checks (OWASP-aligned)
-- Generates structured JSON reports for analysis
-- Logs all scan activity for traceability
-- Uploads reports securely to AWS S3 using least-privilege IAM roles
+### Run Container
+
+```bash
+docker run cloudguard
+```
 
 ---
 
-# How Analysis Works
-- Port scan results identify exposed services
-- HTTP response headers are checked for security misconfigurations
-- Directory enumeration highlights potential attack surfaces
-- Findings are classified by **severity and category**
-- Results are consolidated into a machine-readable report for review
+## ☁️ AWS Deployment Workflow
+
+1. Launch EC2 instance  
+2. Attach IAM role with S3 access  
+3. Deploy Docker container  
+4. Store reports in secure S3 bucket  
 
 ---
 
-# Analyst-Relevant Output
-- Target scanned
-- Issue identified
-- Severity level
-- Evidence (response headers / endpoint)
-- Timestamped logs for audit purposes
+## 📈 Scalability & Performance
 
-Example:
-```json
-{
-  "target": "example.com",
-  "issue": "Missing Security Headers",
-  "severity": "Medium"
-}
+- Supports 500+ header validations
+- Connection reuse & pooling
+- Retry mechanism with timeout control
+- Modular architecture for extensibility
+- Designed for DevSecOps pipeline integration
+
+---
+
+## 🔮 Future Enhancements
+
+- FastAPI REST interface
+- Multi-target parallel scanning
+- PostgreSQL scan history database
+- JWT-based authentication
+- Role-Based Access Control (RBAC)
+- SOC dashboard integration
+- CI/CD pipeline automation
+
+---
+
+## 💼 Resume-Optimized Description
+
+> Designed and deployed CloudGuard, a scalable cloud-based security automation platform for web application vulnerability assessment and security header analysis. Implemented modular scanning architecture, Docker containerization, AWS EC2 deployment, S3-based report storage, structured risk-classified reporting, and retry-enabled network handling supporting 500+ header evaluations per target.
+
+---
+
+## 👩‍💻 Author
+
+**Antarlina Balmiki**  
+Cyber Security Enthusiast | Ethical Hacker | SOC Analyst Aspirant  
+
+Interests:
+- Web Application Security
+- Cloud Security
+- Security Automation
+- DevSecOps Integration
+
+---
+
+## 📄 License
+
+This project is intended for educational and security research purposes.
