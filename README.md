@@ -53,9 +53,9 @@ CloudGuard addresses these challenges through automated pentesting orchestration
 
 ---
 ```
-🏗️ Architecture Overview
+##🏗️ Architecture Overview
 ```
-### Core Modules
+Core Modules
 
 - Scanning Engine
   - Security header analysis
