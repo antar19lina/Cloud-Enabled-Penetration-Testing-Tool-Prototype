@@ -57,25 +57,25 @@ CloudGuard addresses these challenges through automated pentesting orchestration
 ```
 ### Core Modules
 
-- **Scanning Engine**
+- Scanning Engine
   - Security header analysis
   - Vulnerability validation
   - Timeout & retry mechanism
   - Rate limiting
   - Configurable target scanning
 
-- **Reporting Engine**
+- Reporting Engine
   - Executive summary generation
   - Severity classification (Low / Medium / High / Critical)
   - Risk scoring logic
   - Structured JSON-based reporting
 
-- **Cloud Integration**
+- Cloud Integration
   - AWS EC2 deployment
   - AWS S3 secure report storage
   - IAM least-privilege access control
 
-- **Containerization**
+- Containerization
   - Docker-based runtime
   - Portable deployment
 
@@ -83,16 +83,16 @@ CloudGuard addresses these challenges through automated pentesting orchestration
 ```
 ## 🛠️ Technology Stack
 ```
-### Programming
+Programming
 - Python 3
 
-### Cloud & DevOps
+Cloud & DevOps
 - AWS EC2
 - AWS S3
 - IAM Roles & Policies
 - Docker
 
-### Security Concepts
+Security Concepts
 - Web Security Headers
 - Vulnerability Assessment
 - Risk Classification
@@ -101,7 +101,7 @@ CloudGuard addresses these challenges through automated pentesting orchestration
 
 ---
 
-## 🔍 Key Features
+🔍 Key Features
 
 - Automated web security header validation
 - Modular vulnerability checks
@@ -127,7 +127,7 @@ CloudGuard addresses these challenges through automated pentesting orchestration
 
 ---
 
-## 🔐 Security Best Practices Implemented
+🔐 Security Best Practices Implemented
 
 - No hardcoded credentials
 - Environment variable secret management
@@ -235,7 +235,7 @@ docker run cloudguard
 
 ---
 ```
-## 📄 License
+📄 License
 
 This project is intended for educational and security research purposes.
 ```
