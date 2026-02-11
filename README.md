@@ -35,7 +35,7 @@ It enables:
 CloudGuard is built using secure-by-design principles and follows modular, scalable architecture suitable for DevSecOps workflows and SOC environments.
 
 ---
-```
+
 ## 🎯 Problem Statement
 ```
 Modern cloud deployments require continuous security validation.  
@@ -80,9 +80,9 @@ CloudGuard addresses these challenges through automated pentesting orchestration
   - Portable deployment
 
 ---
-
+```
 ## 🛠️ Technology Stack
-
+```
 ### Programming
 - Python 3
 
@@ -138,7 +138,7 @@ CloudGuard addresses these challenges through automated pentesting orchestration
 - Structured logging
 
 ---
-
+```
 ## 📂 Project Structure
 
 ```bash
